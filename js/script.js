@@ -21,11 +21,15 @@ function choose(id){
    
 }
 
-
-
 // function for computer selection 
 const ides = ["paper", "rock", "spock","lizard","scissors"];
 function randomize(){
     var choosed_id=Math.floor(Math.random() * 5);
     return ides[choosed_id];
+}
+
+// set the selection of user 
+function setUserSelection(){
+    var id=localStorage.getItem("id");
+    document.getElementById(id);
 }

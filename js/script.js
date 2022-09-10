@@ -104,7 +104,7 @@ function game() {
                 document.getElementById("result").style.display = "block";
                 var score = localStorage.getItem("score");
                 if (score == null) {
-                    score = 0;
+                    score = 1;
                     localStorage.setItem("score", score);
                 } else {
                     score++;

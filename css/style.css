@@ -43,10 +43,12 @@ body{
     color: hsl(229, 64%, 46%);
     font-size: 12px;
 }
-
-.outer-border {
-    top: 0%;
+.sc-position{
+     top: 0%;
     left: 40%;
+}
+.outer-border {
+   
     width: fit-content;
     border: none;
     border-bottom: 7px;
@@ -97,10 +99,12 @@ body{
     
     background-color: white;
 }
-
-.outer-lizard {
-    top: 70%;
+.liz-position{
+      top: 70%;
     left: 20%;
+}
+.outer-lizard {
+  
     width: fit-content;
     border: none;
     border-bottom: 7px;
@@ -118,9 +122,12 @@ body{
     background-color: rgb(215, 214, 211);
     border-radius: 50%;
 }
-.outer-spock {
-    top: 25%;
+.spock-position {
+top: 25%;
     left: 15%;
+}
+.outer-spock {
+    
     width: fit-content;
     border: none;
     border-bottom: 7px;
@@ -138,9 +145,12 @@ body{
     background-color: rgb(215, 214, 211);
     border-radius: 50%;
 }
-.outer-paper {
-    top: 25%;
+.paper-position {
+     top: 25%;
     left: 65%;
+}
+.outer-paper {
+   
     width: fit-content;
     border: none;
     border-bottom: 7px;
@@ -158,9 +168,12 @@ body{
     background-color: rgb(215, 214, 211);
     border-radius: 50%;
 }
-.outer-rock {
-    top: 70%;
+.rock-position {
+     top: 70%;
     left: 55%;
+}
+.outer-rock {
+   
     width: fit-content;
     border: none;
     border-bottom: 7px;
@@ -217,9 +230,20 @@ body{
 #resultDiv{
     /* position-absolute bottom-50 start-50 translate-middle-x */
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
+    
     left: 50%;
     transform: translateX(-50%);
+    display: block;
+}
+#computer-choice ,#user-choice {
+    display: none;
+}
+#result{
+    display: none;
+}
+
+#winner-img-user , #winner-img-computer{
     display: none;
 }
 @media screen and (max-width:576px) {
@@ -268,7 +292,7 @@ body{
         height: 20px;
         
     }
-    .outer-border {
+    .sc-position{
         top:5%;
         left: 42%;
     }
@@ -288,8 +312,8 @@ body{
     }
 
     .img-div-game {
-        width: 120px;
-        height: 100px;
+        width: 100px;
+        height: 80px;
         border-radius: 50%;
         background-color: white;
        
@@ -300,9 +324,12 @@ body{
         
         background-color: white;
     }
-    #choice{
-        display: flex;
-        flex-wrap: wrap-reverse;
+    #computer-choice , #user-choice{
+        display: none;
+      
+    }
+    .fs-7{
+        font-size: 14px;
     }
     
 }

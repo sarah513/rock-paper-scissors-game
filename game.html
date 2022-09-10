@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="setUserSelection() ; randomize() ; game()">
     <section id="main-section" class="position-relative d-flex justify-content-center pb-5 vh-100">
 
         <div class="  col-lg-6 col-md-8 col-sm-10 col-xs-10">
@@ -49,16 +49,17 @@
             <!-- game section  -->
             <div class="pt-0 pb-5 position-relative d-flex justify-content-between">
                 <!-- user choice  -->
-                <div class=" col-4 text-center" id="choice">
-                    <p class="text-light">You Picked</p>
-                    <div
-                        class=" outer-border position-relative start-50 translate-middle-x d-flex justify-content-center align-items-center mb-3 ">
+                <div class=" col-4 text-center" id="user-choice">
+                    <p class="text-light fs-7">You Picked</p>
+                    <div><img src="images/icons8-man-winner-48.png" alt="" id="winner-img-user"></div>
+                    <div id="user-outer"
+                        class="  position-relative start-50 translate-middle-x d-flex justify-content-center align-items-center mb-3 ">
 
-                        <div class="border-yellow d-flex justify-content-center align-items-center ">
-                            <div class="inner-border d-flex justify-content-center align-items-center ">
+                        <div id="user-middle" class=" d-flex justify-content-center align-items-center ">
+                            <div id="user-inner" class=" d-flex justify-content-center align-items-center ">
 
-                                <div class="img-div-game d-flex justify-content-center align-items-center ">
-                                    <img src="images/icon-scissors.svg" alt="">
+                                <div  class="img-div-game d-flex justify-content-center align-items-center ">
+                                    <img src="images/icon-scissors.svg" alt="" id="user-img">
                                 </div>
                             </div>
 
@@ -68,16 +69,17 @@
                 </div>
 
                 <!-- computer choice  -->
-                <div class="col-4 text-center " id="choice">
-                    <p class="text-light">The House Picked</p>
-                    <div
-                        class=" outer-border position-relative start-50 translate-middle-x d-flex justify-content-center align-items-center   mb-3">
+                <div class="col-4 text-center " id="computer-choice">
+                    <p class="text-light fs-7">The House Picked</p>
+                    <div><img src="images/icons8-man-winner-48.png" alt="" id="winner-img-computer"></div>
+                    <div id="computer-outer"
+                        class="  position-relative start-50 translate-middle-x d-flex justify-content-center align-items-center   mb-3">
 
-                        <div class="border-yellow d-flex justify-content-center align-items-center ">
-                            <div class="inner-border d-flex justify-content-center align-items-center ">
+                        <div id="computer-middle" class="d-flex justify-content-center align-items-center ">
+                            <div id="computer-inner" class="d-flex justify-content-center align-items-center ">
 
                                 <div class="img-div-game d-flex justify-content-center align-items-center">
-                                    <img src="images/icon-scissors.svg" alt="">
+                                    <img src="images/icon-scissors.svg" alt="" id="computer-img">
                                 </div>
                             </div>
 
@@ -94,8 +96,13 @@
 
             <!-- result div  -->
             <div id="resultDiv" class="w-auto m-auto text-center ">
-                <p id="result" class="fs-1 text-light"> you win </p>
-                <a href="index.html" class="border border-1 border-light rounded-2 bg-light text-decoration-none text-dark w-100 p-2">PLAY AGAIN</a>
+                <p id="result" class="fs-1 "> you win </p>
+
+                <div class="d-flex flex-column">
+                    <a href="index.html" class="border border-1 border-light rounded-2 bg-light text-decoration-none text-dark w-100 p-2 mb-3">PLAY AGAIN</a>
+                    <a href="index.html" class="border border-1 border-light rounded-2 bg-light text-decoration-none text-dark w-100 p-2" onclick="restart()">RESTART GAME</a>
+                    
+                </div>
             </div>
             <!-- rule btn  -->
             <div class="d-flex w-100  rule-btn">

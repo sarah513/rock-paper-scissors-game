@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="setwidth()" class="100vh">
+<body onload="setwidth(); indexRestart()" class="100vh">
 
   <!-- main background  -->
   <section id="main-section" class="position-relative d-flex justify-content-center pb-5">
@@ -56,7 +56,10 @@
         <div class="d-flex justify-content-center p-5 position-relative w-100">
           <img src="images/bg-pentagon.svg" alt="" class="w-75">
 
-          <div id="scissors" class=" outer-border position-absolute  d-flex justify-content-center align-items-center " onclick="choose('scissors')">
+
+          <!-- scissors div  -->
+          <div id="scissors" class=" sc-position outer-border position-absolute  d-flex justify-content-center align-items-center "
+            onclick="choose('scissors','images/icon-scissors.svg')">
 
             <div class="border-yellow d-flex justify-content-center align-items-center ">
               <div class="inner-border d-flex justify-content-center align-items-center ">
@@ -70,7 +73,12 @@
 
           </div>
 
-          <div id="lizard" class=" outer-lizard position-absolute  d-flex justify-content-center align-items-center " onclick="choose('lizard')">
+
+
+          <!-- lizard div  -->
+
+          <div id="lizard" class=" liz-position outer-lizard position-absolute  d-flex justify-content-center align-items-center "
+            onclick="choose('lizard','images/icon-lizard.svg')">
 
             <div class="border-lizard d-flex justify-content-center align-items-center ">
               <div class="inner-lizard d-flex justify-content-center align-items-center ">
@@ -84,7 +92,11 @@
 
           </div>
 
-          <div id="rock" class=" outer-rock position-absolute  d-flex justify-content-center align-items-center " onclick="choose('rock')">
+
+          <!-- rock div  -->
+
+          <div id="rock" class="rock-position  outer-rock position-absolute  d-flex justify-content-center align-items-center "
+          onclick="choose('rock','images/icon-rock.svg')">
 
             <div class="border-rock d-flex justify-content-center align-items-center ">
               <div class="inner-rock d-flex justify-content-center align-items-center ">
@@ -97,9 +109,11 @@
             </div>
 
           </div>
+       
 
-
-          <div id="paper" class=" outer-paper position-absolute  d-flex justify-content-center align-items-center " onclick="choose('paper')">
+          <!-- paper div  -->
+          <div id="paper" class="paper-position outer-paper position-absolute  d-flex justify-content-center align-items-center "
+          onclick="choose('paper','images/icon-paper.svg')">
 
             <div class="border-paper d-flex justify-content-center align-items-center ">
               <div class="inner-paper d-flex justify-content-center align-items-center ">
@@ -113,8 +127,10 @@
 
           </div>
 
-
-          <div id="spock" class=" outer-spock position-absolute  d-flex justify-content-center align-items-center " onclick="choose('spock')">
+      
+          <!-- spock div  -->
+          <div id="spock" class="spock-position outer-spock position-absolute  d-flex justify-content-center align-items-center"
+          onclick="choose('spock','images/icon-spock.svg')">
 
             <div class="border-spock d-flex justify-content-center align-items-center ">
               <div class="inner-spock d-flex justify-content-center align-items-center ">
@@ -152,7 +168,7 @@
         </div>
       </div>
 
-     
+
     </div>
     <!-- footer div  -->
     <div class="attribution position-absolute bottom-0 start-50 translate-middle-x text-white">

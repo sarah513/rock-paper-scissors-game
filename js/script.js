@@ -7,6 +7,7 @@ const players = [
 ]
 
 
+
 function setwidth() {
     var x = document.getElementById("score-number").textContent;
     console.log(x);
@@ -125,7 +126,19 @@ function game() {
                 document.getElementById("result").innerHTML = "DRAW";
                 document.getElementById("result").classList.add("text-warning");
                 document.getElementById("result").style.display = "block";
-                document.getElementById("score-number").innerHTML = localStorage.getItem("score");
+                //document.getElementById("score-number").innerHTML = localStorage.getItem("score");
+
+
+                 var score = localStorage.getItem("score");
+                if (score == null) {
+                    score = 0;
+                    localStorage.setItem("score", score);
+                    document.getElementById("score-number").innerHTML = "0";
+                } else {
+                    document.getElementById("score-number").innerHTML = localStorage.getItem("score");
+                }
+
+               
 
 
             }
@@ -142,7 +155,20 @@ function game() {
                 // document.getElementById("computer-inner").classList.add("border-success");
                 document.getElementById("winner-img-computer").style.display = "block"
                 document.getElementById("result").style.display = "block";
-                document.getElementById("score-number").innerHTML = localStorage.getItem("score");
+
+
+                var score = localStorage.getItem("score");
+                if (score == null) {
+                    score = 0;
+                    localStorage.setItem("score", score);
+                    document.getElementById("score-number").innerHTML = "0";
+                } else {
+                    document.getElementById("score-number").innerHTML = localStorage.getItem("score");
+                    
+                }
+
+               
+
             }
         }, 500);
 
@@ -150,18 +176,26 @@ function game() {
 
 function restart() {
     localStorage.setItem("restart-flag", "1")
-    localStorage.setItem("score",0);
+    localStorage.setItem("score", 0);
     document.getElementById("score-number").innerHTML = "0";
     location.replace("index.html");
 
 }
 function indexRestart() {
+  
+    var score = localStorage.getItem("score");
+    if (score == null) {
+        score = 0;
+        localStorage.setItem("score", score);
+    } 
+    document.getElementById("score-number").innerHTML = localStorage.getItem("score");
+
     var val = localStorage.getItem("restart-flag");
-    if (val == 1) {
-        localStorage.setItem("score",0);
+    if (val == 1 ) {
+        localStorage.setItem("score", 0);
         document.getElementById("score-number").innerHTML = "0"
-    }else{
-        document.getElementById("score-number").innerHTML=localStorage.getItem("score");
+    } else {
+        document.getElementById("score-number").innerHTML = localStorage.getItem("score");
     }
 }
 
